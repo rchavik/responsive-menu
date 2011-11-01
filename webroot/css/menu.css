@@ -1,0 +1,45 @@
+/* Styles for dropdown inspired from:
+ *
+ * http://www.justsoftwaresolutions.co.uk/articles/css_menus.html by Anthony Williams
+ *
+ */
+
+.responsive-menu a {
+	padding: 0.40rem 0.5rem;
+	line-height: 2rem;
+	outline: none;
+	color: inherit;
+	display: block;
+	text-decoration: none;
+}
+
+.responsive-menu, .responsive-menu * { margin:0; padding:0; list-style:none; }
+
+.responsive-menu > li { float: inherit; }
+.responsive-menu + * { clear: inherit; }
+
+.responsive-menu ul { display: none; position: absolute; }
+.responsive-menu li:hover > ul { display: inline-block; }
+
+.responsive-menu li { position: relative; }
+.responsive-menu ul ul { top: 0; left: 100%; }
+
+/* icons + arrows */
+.responsive-menu .icon { padding: 0 2rem; }
+.responsive-menu .icon.success { background: url("../img/tick.png") no-repeat; }
+.responsive-menu .icon.failed { background: url("../img/cross.png") no-repeat; }
+
+.responsive-menu .arrow { padding: 0 6px; }
+
+.responsive-menu > li.hasChild .arrow { background: url('../img/arrows-ffffff.png') no-repeat scroll 6px -96px; }
+.responsive-menu.dropdown > li li.hasChild .arrow { background: url('../img/arrows-ffffff.png') no-repeat scroll 6px 6px; }
+
+@media only screen and (max-width: 768px) {
+
+	.responsive-menu li { float: none; width: 100%; }
+
+	.responsive-menu { padding: 0; margin: 0; }
+
+	.responsive-menu li:hover > ul { display: none; }
+	.responsive-menu li ul { position: relative; left: 0; top: 0; }
+}

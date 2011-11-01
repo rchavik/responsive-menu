@@ -1,0 +1,75 @@
+<!doctype html>
+<head>
+<title>Test Menu</title>
+<link href="css/menu.css" type="text/css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="js/menu.js"></script>
+</head>
+
+<style>
+/* color scheme for menu */
+#menu { background: #2D2D2D; float: left; width: 100%; }
+#menu ul { background: #eee; }
+#menu ul a { color: #2d2d2d; }
+#menu ul a:hover { background: #ddd; }
+#menu a { padding: 0.40rem 0.5rem; line-height: 2rem; color: #fff; text-decoration: none; }
+#menu a:hover { background: #666; }
+#menu a.selected { background: #555; }
+
+@media only screen and (max-width: 768px) {
+	#menu ul ul { background: #e6e6e6; }
+}
+
+</style>
+
+<body>
+<ul id='menu'>
+	<li><a href="?">Home</a></li>
+	<li><a href="?">Review</a>
+		<ul>
+			<li>
+				<a href="#yes"><span class="icon success">Approve</span></a></div>
+			</li>
+			<li><a href="#no"><span class="icon failed">Reject</a></li>
+		</ul>
+	</li>
+	<li><a href="?longer">A Longer Menu containing Bookmarks</a>
+		<ul>
+			<li><a href="?framework">PHP MVC Framework References</a>
+				<ul>
+					<li><a href="?cakephp">Cakephp</a>
+						<ul>
+							<li><a href="?controller">Controllers</a></li>
+
+							<li><a href="?components">Components</a>
+								<ul>
+									<li><a href="?auth">Auth</a></li>
+									<li><a href="?security">Security</a></li>
+								</ul>
+							</li>
+
+							<li><a href="?helpers">Helpers</a>
+								<ul>
+									<li><a href="?form">Form</a></li>
+									<li><a href="?session">Session</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="?zend">Zend</a></li>
+				</ul>
+			</li>
+			<li><a href="?nsfw">NSFW</a></li>
+		</ul>
+	</li>
+	<li><a href="?help">Help</a></li>
+</ul>
+
+<script>
+$(function() {
+	$('#menu').responsiveMenu({autoArrows: true});
+})
+</script>
+
+</body>
+</html>
